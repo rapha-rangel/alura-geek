@@ -1,0 +1,213 @@
+* {
+  padding:0;
+  margin:0;
+  vertical-align:baseline;
+  list-style:none;
+  border:0
+  }
+body{
+  font-family:"Jersey 20", sans-serif ;
+}
+ol, ul,li {
+  list-style: none;
+}
+:root{
+  /*Insira a variavel das outras cores inspecionando o modelo do figma*/
+  /*Se esforce para trabalhar com variáveis, é uma dica profissional valiosa*/
+  --cor-do-header: #03318c;
+  --cor-do-texto-header:#E5E5E5;
+  --cor-do-titulo:#00000;
+  --cor-disable-btn: #99A3A4;
+}
+/********************************************************************************************************/
+  /*Mobile*/
+@media (min-width: 425px) {
+  /*Header*/
+  div.header__div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cor-do-header);
+    box-shadow: 0px 7px 0.9px 0px #00000040;
+  }
+  img.header__img{
+    width:138px;
+    height:100px;
+  }
+  h3.header__title{
+    font-size: 48px;
+    font-weight: 400;
+    color: var(--cor-do-texto-header);
+    line-height: 16px;
+  }
+
+  /*Main*/
+  section.main{
+    display: grid;
+  }
+  div.form__div{
+    padding: 40px;
+  }
+  h3.form__title,
+  h3.produtos__title{
+    text-align: center;
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 30px;
+    color: var(--cor-do-titulo);
+    text-transform: uppercase;
+    margin-bottom: 40px;
+  }
+  .form{
+    display: grid;
+    gap: 40px;
+    margin-bottom: 80px;
+  }
+  input.input__form{
+    border: 3px solid var(--cor-do-header);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20.8px;
+    border-radius: 25px;
+    padding: 10px;
+  }
+  ::placeholder{
+    color: var(--cor-do-header);
+    font-weight: 700;
+  }
+  div.btn__div{
+    display: flex;
+    gap:13px;
+  }
+  input.btn__guardar{
+    border-radius: 15px;
+    border:none;
+    background-color: var(--cor-disable-btn);
+    padding: 15px 40px;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 26px;
+    color: var(--cor-do-texto-header);
+    font-family: "Jersey 20";
+    transition: all 0.6s ease-in-out;
+  }
+  input.btn__limpar{
+    border-radius: 15px;
+    border:2px solid var(--cor-do-header);
+    background-color: #ffff;
+    padding: 15px 40px;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 26px;
+    color: var(--cor-do-header);
+    font-family: "Jersey 20";
+    cursor: pointer;
+  }
+  ul.produtos__carrosuel{
+    padding-left:16px;
+    display: flex;
+    gap: 8px;
+    width: 768px;
+    overflow: auto;
+  }
+  div.produtos__box{
+    position: relative;
+    display: grid;
+    gap:10px;
+    width: 196px;
+    border-radius: 10px;
+    border: 3px solid var(--cor-do-titulo);
+    background-color: #03318c;
+    box-shadow: -5px 6px 3.3px 0px #00000040;
+    border: 3px solid #000000;
+    margin-bottom: 20px;
+  }
+  div.img__div{
+    padding: 8px;
+  }
+  img.produto__img{
+    width: 176px;
+    height: 174px;
+    border: 3px solid #000000;
+    border-radius: 3px;
+  }
+  h3.produto__titulo{
+    margin-left: 10px;
+    color: #ffff;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 19.5px;
+  }
+  div.produto__spans{
+    margin:0 10px 10px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  span.produto__preco{
+    color: #ffff;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20.8px;
+  }
+  img.produto__icon{
+    background-color: transparent;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+  }
+  img.produto__icon:hover{
+    border-radius: 100%;
+    padding:3px;
+    background-color: red;
+    transform: scale(1.5);
+  }
+}
+
+/********************************************************************************************************/
+@media (min-width: 1024px) {
+  section.main{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    padding: 60px 40px;
+    gap: 30px;
+  }
+  div.form__div{
+    padding: 0px 40px;
+  }
+  div.produtos__div{
+    box-shadow: -12px 10px 5.8px 0px #00000040;
+
+  }
+  ul.produtos__carrosuel{
+    row-gap: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width:450px;
+    max-height: 500px;
+    overflow-x: auto;
+  }
+  ::-webkit-scrollbar {
+    width: 5px;      
+  }
+  ::-webkit-scrollbar-track {
+    background: #ffff; 
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #e0e0e0;
+    border-radius: 20px;      
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #979797; 
+  }
+}
+
+/********************************************************************************************************/
+@media (min-width: 1440px) {
+  ul.produtos__carrosuel{
+    grid-template-columns: repeat(3, 1fr);
+    width:650px;
+  }
+}

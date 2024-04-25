@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Folha de estilo de CSS Linkado -->
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Fonte do Projeto Raleway -->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+15&family=Jersey+20&display=swap" rel="stylesheet">
+    <title>Alura Geek</title>
+</head>
+<body>
+  <div class="all">
+    <!-- Sessão de Haeder  -->
+    <section class="header">
+      <div class="header__div">
+        <img class="header__img" alt="" src="assets/hearts_img.png"/>
+        <h3 class="header__title">Alura GEEKS</h3>
+      </div>
+    </section>
+
+    <!-- Sessão de Main  -->
+    <section class="main">
+      <!-- Div Form  -->
+      <div class="form__div">
+        <h3 class="form__title">adicionar produto:</h3>
+        <form class="form" data-formulario>
+          <input class="input__form" type="text" placeholder="nome..." input-name required />
+          <input class="input__form" type="number" step="0.01" min="0" max="10000" placeholder="preço..." input-preco required/>
+          <input class="input__form" type="text" placeholder="imagem..." input-img required/>
+          <div class="btn__div">
+            <input class="btn__guardar" type="submit" value="Guardar" disabled/> 
+            <input class="btn__limpar" type="reset" value="Limpar"/>
+          </div>
+        </form>
+      </div>
+      <!-- Div Produtos  -->
+      <div class="produtos__div">
+        <h3 class="produtos__title">meus produtos:</h3>
+        <ul class="produtos__carrosuel" id="produtos__catalogo">
+        </ul>
+      </div>
+    </section>
+
+  </div>
+  <!-- Script Linkado do seu documento de JavaScript -->
+
+  <script src="app/main.js" type="module"></script>
+  <script src="app/inserirProduto.js" type="module"></script>
+  <script src="app/deletarProduto.js" type="module"></script>
+</body>
+</html>
+
